@@ -1,0 +1,35 @@
+printer_id/
+│
+├── README.md              ← how to set up / run / reproduce
+├── requirements.txt       ← pinned, CUDA-compatible deps
+├── config.yaml            ← all tunables in one place
+│
+└── src/
+    └── printerid/
+        ├── __init__.py
+        │
+        ├── data/
+        │   ├── dataset.py         ← VIPPrint patch Dataset + full-image fallback
+        │   └── patch_extractor.py ← Canny-based ROI extractor (offline & on-the-fly)
+        │
+        ├── models/
+        │   ├── __init__.py
+        │   └── xception.py        ← thin timm wrapper w/ classifier head
+        │
+        ├── utils/
+        │   ├── transforms.py      ← augmentation + preprocessing
+        │   ├── metrics.py         ← accuracy, F1, confusion matrix helpers
+        │   ├── grad_cam.py        ← interpretability (Grad-CAM++)
+        │   └── logger.py          ← lightweight W&B-style CSV logger
+        │
+        ├── training/
+        │   ├── train.py           ← main training loop
+        │   └── evaluate.py        ← test / cross-val runner
+        │
+        └── inference/
+            └── predict.py         ← drop-in CLI for production
+│
+└── scripts/
+    ├── download_data.sh          ← grabs VIPPrint from Zenodo
+    ├── preprocess_patches.py     ← mass-extract ROI patches (once)
+    └── run_training.sh           ← one-liner to kick off training
