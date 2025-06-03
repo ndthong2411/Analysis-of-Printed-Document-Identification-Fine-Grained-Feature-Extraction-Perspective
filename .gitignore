@@ -1,0 +1,59 @@
+###############################################################################
+#  GLOBAL PYTHON / VENV / EDITOR CRUFT                                        #
+###############################################################################
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Virtual-environment directories
+.venv/
+env/
+venv/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# VS Code & PyCharm
+.vscode/
+.idea/
+
+# macOS, Windows thumbnail & Linux trash
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+###############################################################################
+#  PROJECT-SPECIFIC: DATA, MODELS, LOGS, REPORTS                              #
+###############################################################################
+# --- LARGE RAW DATASETS ------------------------------------------------------
+data/                      # 〈─ ignore everything under data/
+!data/README.md            #     ..except this tiny pointer file
+
+# --- TRAINED WEIGHTS & EXPERIMENT OUTPUTS ------------------------------------
+outputs/
+*.pt                       # PyTorch checkpoints
+*.pth
+*.onnx
+*.ckpt
+
+# --- WANDB / TENSORBOARD RUN LOGS --------------------------------------------
+wandb/
+runs/
+tensorboard/
+
+###############################################################################
+#  OPTIONAL: OS-DEPENDENT BUILD FILES                                         #
+###############################################################################
+# compiled shared libraries (C, C++, cython, etc.)
+*.so
+*.dylib
+*.dll
