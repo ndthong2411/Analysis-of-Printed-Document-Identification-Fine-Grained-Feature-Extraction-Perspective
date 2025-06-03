@@ -4,8 +4,9 @@ import multiprocessing as mp
 from pathlib import Path
 from data.patch_extractor import extract_edge_patches
 
-SRC = Path("data/VIPPrint-Dataset/scans")           # after extraction
-DST = Path("data/VIPPrint-Dataset_patches")
+
+SRC_DIR = Path(r"E:/thong/code/printd/data/VIPPrint-Dataset/scans")   # 👈 your scans
+DST_DIR = Path(r"E:/thong/code/printd/data/VIPPrint_patches")
 
 def worker(img_path):
     printer = img_path.parent.name         # e.g. printer0
