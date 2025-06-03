@@ -60,6 +60,6 @@ tensorboard/
 
   
 
-data/VIPPrint-Dataset/*
-!data/VIPPrint-Dataset/.gitkeep
+src/printerid/data/VIPPrint-Dataset/*
+!src/printerid/data/VIPPrint-Dataset/.gitkeep
 
