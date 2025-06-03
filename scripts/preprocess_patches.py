@@ -2,10 +2,10 @@
 """Extracts ROI patches from each scanned page."""
 import multiprocessing as mp
 from pathlib import Path
-from printerid.data.patch_extractor import extract_edge_patches
+from data.patch_extractor import extract_edge_patches
 
-SRC = Path("data/VIPPrint/scans")           # after extraction
-DST = Path("data/VIPPrint_patches")
+SRC = Path("data/VIPPrint-Dataset/scans")           # after extraction
+DST = Path("data/VIPPrint-Dataset_patches")
 
 def worker(img_path):
     printer = img_path.parent.name         # e.g. printer0

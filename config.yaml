@@ -3,7 +3,7 @@ seed: 42
 device: cuda
 
 data:
-  root: data/VIPPrint                         # expected folder after download
+  root: data/VIPPrint-Dataset                         # expected folder after download
   patch_dir: data/VIPPrint_patches            # auto-created by preprocess script
   input_size: 299
   batch_size: 64

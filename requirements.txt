@@ -1,7 +1,7 @@
-torch==2.3.0         # CUDA 12.1 build (works fine on 3090)
-torchvision==0.20.0
+# torch==2.3.0         # CUDA 12.1 build (works fine on 3090)
+# torchvision==0.20.0
 timm==0.9.16         # brings xception & many others
-opencv-python==4.11.0.80
+opencv-python==4.11.0.86          # latest stable, full GUI build
 PyYAML==6.0.1
 scikit-learn==1.5.0
 matplotlib==3.9.0
